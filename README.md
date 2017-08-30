@@ -49,4 +49,5 @@ public class TestController {
 
 }
 ```
-so when you curl http://localhost:8080/input?word=Charles,you can get String helloCharlesworld
+so when you curl http://localhost:8080/input?word=Charles
+you can get String helloCharlesworld
