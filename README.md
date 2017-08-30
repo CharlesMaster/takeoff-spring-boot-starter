@@ -31,3 +31,22 @@ takeoff:
     prefix: hello
     suffix: world
 ```
+
+- controller
+
+```
+@RestController
+public class TestController {
+
+    @Autowired
+    private TakeoffService takeoffService;
+
+    @GetMapping("/input")
+    public String input(String word){
+        return takeoffService.wrap(word);
+    }
+
+
+}
+```
+so when you curl http://localhost:8080/input?word=Charles,you can get String helloCharlesworld
